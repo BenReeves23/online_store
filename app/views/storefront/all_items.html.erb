@@ -1,0 +1,11 @@
+<h1>Shoes, Shirts, Hats and Pants!</h1>
+<p>Here you can find all sorts of shoes, shirts, hats and pants, all from your favorite brands!</p>
+
+
+<% if current_user.nil? %>
+	<h5>Hello new user!</h5>
+<% else %>
+<h5>Hey there <strong><%= current_user.name %></strong></h5>	
+<% end %>
+
+<%= render 'storefront/items' %>
